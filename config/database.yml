@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: open_flights_production
-  username: open_flights
-  password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
+  database: <%=ENV['DATABASE_URL']%>
+  #username: open_flights
+  #password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
