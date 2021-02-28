@@ -72,7 +72,7 @@ const Wrapper = styled.div`
   height: 100vh;
   padding-top: 100px;
 `
-const SubmitBtn = styled.div`
+const SubmitBtn = styled.button`
   color: #fff;
   background: #333;
   border-radius: 4px;
@@ -117,10 +117,10 @@ const ReviewForm = (props) => {
       <form onSubmit={props.handleSubmit}>
         <Headline>Have an experience with {props.attributes.name}? Share your Review!</Headline>
         <Field>
-          <input onChange={props.handleChange} value={props.review.title || "" }type="text" name="title" placeholder="Review Title"/>
+          <input onChange={props.handleChange} value={props.review.title || "" }type="text" name="title" placeholder="Review Title" required/>
         </Field>
         <Field>
-          <input onChange={props.handleChange}  value={props.review.description || "" } type="text" name="description" placeholder="Review Description"/>
+          <input onChange={props.handleChange}  value={props.review.description || "" } type="text" name="description" placeholder="Review Description" required/>
         </Field>
         <Field>
           <RatingContainer>
